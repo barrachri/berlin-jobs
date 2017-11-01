@@ -1,0 +1,124 @@
+name: pandas-pyladies
+channels:
+- conda-forge
+- defaults
+dependencies:
+- appnope=0.1.0=py36_0
+- arrow-cpp=0.7.1=py36_2
+- asn1crypto=0.22.0=py36_0
+- backports=1.0=py36_1
+- backports.functools_lru_cache=1.4=py36_1
+- beautifulsoup4=4.6.0=py36_0
+- blas=1.1=openblas
+- bleach=2.0.0=py36_0
+- bokeh=0.12.10=py36_0
+- ca-certificates=2017.7.27.1=0
+- certifi=2017.7.27.1=py36_0
+- cffi=1.10.0=py36_0
+- chardet=3.0.4=py36_0
+- cryptography=2.0.3=py36_0
+- cycler=0.10.0=py36_0
+- cymem=1.31.2=py36_0
+- cytoolz=0.8.2=py36_0
+- decorator=4.1.2=py36_0
+- dill=0.2.6=py36_0
+- entrypoints=0.2.3=py36_1
+- freetype=2.7=1
+- ftfy=4.4.2=py36_0
+- html5lib=0.999999999=py36_0
+- icu=58.1=1
+- idna=2.6=py36_1
+- ipykernel=4.6.1=py36_0
+- ipython=6.2.1=py36_0
+- ipython_genutils=0.2.0=py36_0
+- ipywidgets=7.0.3=py36_1
+- jedi=0.10.2=py36_0
+- jinja2=2.9.6=py36_0
+- jpeg=9b=1
+- jsonschema=2.6.0=py36_0
+- jupyter=1.0.0=py36_0
+- jupyter_client=5.1.0=py36_0
+- jupyter_console=5.2.0=py36_0
+- jupyter_core=4.3.0=py36_0
+- libffi=3.2.1=3
+- libgfortran=3.0.0=0
+- libpng=1.6.28=1
+- libsodium=1.0.15=0
+- markupsafe=1.0=py36_0
+- matplotlib=2.1.0=py36_0
+- mistune=0.8=py36_0
+- murmurhash=0.26.4=py36_0
+- nbconvert=5.3.1=py_1
+- nbformat=4.4.0=py36_0
+- ncurses=5.9=10
+- notebook=5.2.0=py36_1
+- numpy=1.12.1=py36_blas_openblas_200
+- openblas=0.2.19=2
+- openssl=1.0.2l=0
+- pandas=0.21.0=py36_0
+- pandoc=2.0.0.1=0
+- pandocfilters=1.4.1=py36_0
+- parquet-cpp=1.3.0.post=2
+- pexpect=4.2.1=py36_0
+- pickleshare=0.7.4=py36_0
+- pip=9.0.1=py36_0
+- plac=0.9.6=py36_0
+- preshed=1.0.0=py36_0
+- prompt_toolkit=1.0.15=py36_0
+- ptyprocess=0.5.2=py36_0
+- pyarrow=0.7.1=py36_1
+- pycparser=2.18=py36_0
+- pygments=2.2.0=py36_0
+- pyopenssl=17.2.0=py36_0
+- pyparsing=2.2.0=py36_0
+- pyqt=5.6.0=py36_4
+- pysocks=1.6.7=py36_0
+- python=3.6.3=0
+- python-dateutil=2.6.1=py36_0
+- pytz=2017.3=py_1
+- pyyaml=3.12=py36_1
+- pyzmq=16.0.2=py36_2
+- qt=5.6.2=h9e3eb04_4
+- qtconsole=4.3.1=py36_0
+- readline=6.2=0
+- regex=2017.09.23=py36_0
+- requests=2.18.4=py36_1
+- scikit-learn=0.19.1=py36_blas_openblas_200
+- scipy=0.19.1=py36_blas_openblas_202
+- setuptools=36.6.0=py36_1
+- simplegeneric=0.8.1=py36_0
+- sip=4.18=py36_1
+- six=1.11.0=py36_1
+- spacy=1.9.0=np112py36_1
+- sqlite=3.13.0=1
+- termcolor=1.1.0=py36_1
+- terminado=0.6=py36_0
+- testpath=0.3.1=py36_0
+- thinc=6.5.2=np112py36_0
+- tk=8.5.19=2
+- toolz=0.8.2=py_2
+- tornado=4.5.2=py36_0
+- tqdm=4.19.4=py_0
+- traitlets=4.3.2=py36_0
+- ujson=1.35=py36_0
+- urllib3=1.22=py36_0
+- wcwidth=0.1.7=py36_0
+- webencodings=0.5=py36_0
+- wheel=0.30.0=py_1
+- widgetsnbextension=3.0.6=py36_0
+- wrapt=1.10.11=py36_0
+- xz=5.2.3=0
+- yaml=0.1.6=0
+- zeromq=4.2.1=1
+- zlib=1.2.8=3
+- pip:
+  - backports.functools-lru-cache==1.4
+  - en-core-web-sm==1.2.0
+  - ipython-genutils==0.2.0
+  - jupyter-client==5.1.0
+  - jupyter-console==5.2.0
+  - jupyter-core==4.3.0
+  - pathlib==1.0.1
+  - prompt-toolkit==1.0.15
+prefix: /Users/christianbarra/miniconda3/envs/pandas-pyladies
+
