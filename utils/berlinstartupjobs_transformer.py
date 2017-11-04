@@ -1,10 +1,4 @@
-
-# coding: utf-8
-
-# Transformer for Berlinstartupjobs.
-
-# In[1]:
-
+"""Transformer for Berlinstartupjobs."""
 
 import os
 import json
@@ -22,16 +16,11 @@ BASE = os.path.dirname(os.path.abspath(__name__))
 folder = os.path.join(BASE, "data/raw/original/berlinstartupjobs")
 csv_folder = os.path.join(BASE, "data/raw/csv/berlinstartupjobs")
 
-# In[4]:
-
 files = glob.glob(os.path.join(folder, "*.json"))
-
-# In[5]:
 
 log.info(f"Folder: {folder}")
 log.info(f"Total number of files: {len(files)}")
 
-# In[6]:
 
 # some easy cleanings
 def clean_entry(entries):
@@ -48,13 +37,15 @@ def clean_entry(entries):
 
         _entry['updated_on'] = entry['modified_gmt']
 
-        _entry['role'], _entry['company']  = entry['title']['rendered'].split(" // ")
+        title = entry['title']['rendered'].split(" // ")
+        _entry['role'], _entry['company'] = title
 
         _entry['slug'] = entry['slug']
 
         _entry['link'] = entry['link']
 
-        _entry['description'] = BeautifulSoup(entry['content']['rendered'], "html5lib").text
+        _entry['description'] = BeautifulSoup(
+            entry['content']['rendered'], "html5lib").text
 
         _entry['tags'] = entry['tags']
 
@@ -62,7 +53,6 @@ def clean_entry(entries):
 
     return _entries
 
-# In[7]:
 
 log.info("Converting json to csv....")
 
@@ -91,4 +81,3 @@ for index, file in enumerate(files, 1):
             w.writeheader()
             w.writerows(cleaned_entries)
         log.info(f"\t{index}) {csv_filename} saved")
-
