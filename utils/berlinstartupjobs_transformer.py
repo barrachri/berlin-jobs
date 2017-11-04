@@ -67,16 +67,6 @@ def clean_entry(entries):
 log.info("Converting json to csv....")
 
 for index, file in enumerate(files, 1):
-    with open(file, mode="r", encoding="utf-8") as f:
-        try:
-            entries = json.loads(f.read(), encoding="utf-8")
-        except json.JSONDecodeError:
-            print(f"Error: {file}")
-            continue
-
-    cleaned_entries = clean_entry(entries)
-
-    del entries
 
     filename = os.path.basename(file)
     csv_filename = "".join((os.path.splitext(filename)[0], ".csv"))
@@ -85,6 +75,17 @@ for index, file in enumerate(files, 1):
     if os.path.exists(csv_path):
         log.info(f"\t{index}) {csv_filename} already exist")
     else:
+
+        with open(file, mode="r", encoding="utf-8") as f:
+            try:
+                entries = json.loads(f.read(), encoding="utf-8")
+            except json.JSONDecodeError:
+                print(f"Error: {file}")
+                continue
+
+        cleaned_entries = clean_entry(entries)
+        del entries
+
         with open(csv_path, 'w', encoding="utf-8") as f:
             w = csv.DictWriter(f, cleaned_entries[0].keys())
             w.writeheader()
